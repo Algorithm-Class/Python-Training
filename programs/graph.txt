@@ -1,0 +1,108 @@
+
+class Graph
+{
+      int V;
+      int E;
+       
+      
+      
+      LinkedList []l;
+      
+      
+      Graph(int v)
+      {
+           this.v=v;
+           l= new LinkedList[v];
+           
+           
+           for(i=0;i<v;i++)
+           {
+               l[i]=NULL;
+            }
+           
+      }
+      
+      void addEdge(int u, int v)
+      {
+                 l[u].insert(v)
+                 E++;
+                 
+                 //l[v].insert(u) undirected
+      }
+      remove(int u, int v)
+      {
+          l[u].remove(v)
+          // l[v].remove(u)
+      }
+      DFS()
+      {
+           
+                int t;
+      
+                int []ft;
+                int []dt;
+                int []parent;
+                boolean []visted;
+                int []color;
+
+                
+           
+                ft= new int [v];
+                dt= new int [v];
+                parent= new int [v];
+                visted = new boolean [v];
+                color = new int [v];
+           
+               for(i=0;i<v;i++)
+               {
+                   l[i]=NULL;
+                   dt[i]=0;
+                   ft[i]=0;
+                   parent[i]=-999
+                   visited[i]=0
+                   color[i]=0
+               }
+               t=0;
+               for(i=0;i<v;i++)
+               {
+                   if(color[i]==0)
+                      DFS_UTL(i,t)
+               }
+       }
+       
+       DFS_UTL(int u, int t)
+       {
+           color[u]=1;
+           t=t+1;
+           dt[u]=t;
+           
+           node p;
+           p=l[u].head;
+           
+           while(p!=NULL)
+           {
+               v=p.data;
+               if(clolor[v]==0 )
+               {
+                  parent[v]=u;
+                  
+                  dfs_UTL(v)
+               }
+           }
+           color[v]=2;
+           t=t+1;
+           ft[v]=t;
+       }
+           
+           
+                  
+           
+                   
+               
+               
+}
+
+Graph g = new Graph(5)
+
+g.addEdge(1,2)
+g.addEdge(1,4)

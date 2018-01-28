@@ -1,0 +1,13 @@
+class stk:
+    def __init__(self,n) :
+        self.size=n;
+	self.top=-1;
+	self.l=[]
+   def push(self,x) :
+       if(self.top== self.size-1) :
+          print("overflow");
+          exit 0
+       self.l.append(x);
+       self.l.top=self.l.top + 1
+
+ s1=stk(5)
